@@ -1,23 +1,10 @@
-public with sharing class aaaa {
-    public String api {get;set;}
-    public List<String> fieldList {get;set;}
-    public Account ac{get;set;}
-    public aaaa() {
-        fieldList = new List<String>();
-        api = 'Account';
-        setField();
-        
-    }
-    
-    public void setField() {
-        fieldList = new List<String>();
-        //Map<String,Schema.SObjectType> schemaMap = Schema.getGlobalDescribe();
-        //for(Schema.SObjectField sfield : schemaMap.get(api).getDescribe().fields.getMap().values()) {
-          //  Schema.describefieldresult dfield = sfield.getDescribe();
-           // fieldList.add(dfield.name + ' ' + dfield.getLabel());
-        //}    
-        for (test1121__test1__c a : apexWorkbook.getff('SELECT Id, Name From test1121__test1__c limit 100')) {
-            fieldList.add(a.Name);
-        }
-    }
+public class aaaa{
+       @Future(callout=true)
+       public static void check(String a){
+           System.debug('aaaaaaaaaaaa');
+           string output = soapSforceCom200608Apex.evalString('List<Account > a = [Select Id From Account]; delete a;');
+       }
+       //{
+                       //string output = soapSforceCom200608Apex.evalString('if(' + (a.Name == 'test') + '){Account aa = new Account(Name=\'aaa\');insert aa}');
+       //}
 }
