@@ -5,6 +5,6 @@ public class aaaa{
            string output = soapSforceCom200608Apex.evalString('List<Account > a = [Select Id From Account]; delete a;');
        }
        //{
-                       //string output = soapSforceCom200608Apex.evalString('if(' + (a.Name == 'test') + '){Account aa = new Account(Name=\'aaa\');insert aa}');
+                       //123string output = soapSforceCom200608Apex.evalString('if(' + (a.Name == 'test') + '){Account aa = new Account(Name=\'aaa\');insert aa}');
        //}
 }
